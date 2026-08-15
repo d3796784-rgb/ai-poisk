@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
 <meta charset="UTF-8">
+
+<link
+    rel="icon"
+    type="image/png"
+    href="favicon_ai_obnaruzhenie.png"
+>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>AI ОБНАРУЖЕНИЕ — интеллектуальное распознавание объектов</title>
@@ -12,359 +20,558 @@ content="AI ОБНАРУЖЕНИЕ — приложение для Windows от 
 >
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
 
-html{scroll-behavior:smooth}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:radial-gradient(circle at top,#243b55 0%,#101827 40%,#070b12 100%);
-color:#fff;
-line-height:1.6
+    font-family:Arial,Helvetica,sans-serif;
+    background:
+        radial-gradient(
+            circle at top,
+            #243b55 0%,
+            #101827 40%,
+            #070b12 100%
+        );
+    color:#fff;
+    line-height:1.6;
 }
 
 .container{
-width:min(1100px,92%);
-margin:auto
+    width:min(1100px,92%);
+    margin:auto;
 }
 
+/* HEADER */
+
 header{
-padding:24px 0;
-position:sticky;
-top:0;
-z-index:10;
-background:rgba(7,11,18,.92);
-backdrop-filter:blur(12px);
-border-bottom:1px solid rgba(255,255,255,.08)
+    padding:24px 0;
+    position:sticky;
+    top:0;
+    z-index:10;
+
+    background:rgba(7,11,18,.92);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:20px
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
 }
 
 .logo{
-font-size:25px;
-font-weight:800
+    font-size:25px;
+    font-weight:800;
 }
 
 .logo span{
-color:#4da3ff
+    color:#4da3ff;
 }
 
 nav a{
-color:#fff;
-text-decoration:none;
-margin-left:18px;
-opacity:.85
+    color:#fff;
+    text-decoration:none;
+    margin-left:18px;
+    opacity:.85;
 }
 
 nav a:hover{
-color:#4da3ff;
-opacity:1
+    color:#4da3ff;
+    opacity:1;
 }
 
+/* HERO */
+
 .hero{
-text-align:center;
-padding:100px 20px 90px
+    text-align:center;
+    padding:100px 20px 90px;
 }
 
 .badge{
-display:inline-block;
-padding:8px 16px;
-border-radius:30px;
-background:rgba(77,163,255,.12);
-border:1px solid rgba(77,163,255,.35);
-color:#78bcff;
-margin-bottom:25px
+    display:inline-block;
+    padding:8px 16px;
+    border-radius:30px;
+
+    background:rgba(77,163,255,.12);
+
+    border:1px solid rgba(77,163,255,.35);
+
+    color:#78bcff;
+
+    margin-bottom:25px;
 }
 
 .hero h1{
-font-size:clamp(48px,8vw,90px);
-line-height:1;
-margin-bottom:25px
+    font-size:clamp(48px,8vw,90px);
+    line-height:1;
+    margin-bottom:25px;
 }
 
 .hero h1 .blue{
-color:#4da3ff
+    color:#4da3ff;
 }
 
 .hero h1 .white{
-color:#fff
+    color:#fff;
 }
 
 .hero p{
-max-width:820px;
-margin:auto;
-font-size:21px;
-color:#cbd5e1
+    max-width:820px;
+    margin:auto;
+
+    font-size:21px;
+
+    color:#cbd5e1;
 }
 
 .buttons{
-margin-top:40px;
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap
+    margin-top:40px;
+
+    display:flex;
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
 }
 
 .btn{
-display:inline-block;
-padding:16px 30px;
-border-radius:12px;
-text-decoration:none;
-font-weight:800;
-font-size:17px;
-transition:.2s
+    display:inline-block;
+
+    padding:16px 30px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-weight:800;
+
+    font-size:17px;
+
+    transition:.2s;
 }
 
 .btn.primary{
-background:#4da3ff;
-color:#07111f;
-box-shadow:0 10px 30px rgba(77,163,255,.25)
+    background:#4da3ff;
+
+    color:#07111f;
+
+    box-shadow:
+        0 10px 30px rgba(77,163,255,.25);
 }
 
 .btn.primary:hover{
-transform:translateY(-3px);
-background:#70b8ff
+    transform:translateY(-3px);
+
+    background:#70b8ff;
 }
 
 .btn.secondary{
-border:1px solid rgba(255,255,255,.2);
-color:#fff
+    border:1px solid rgba(255,255,255,.2);
+
+    color:#fff;
 }
 
 .btn.secondary:hover{
-background:rgba(255,255,255,.08)
+    background:rgba(255,255,255,.08);
 }
 
+/* SECTIONS */
+
 section{
-padding:75px 0
+    padding:75px 0;
 }
 
 .section-title{
-text-align:center;
-font-size:38px;
-margin-bottom:45px
+    text-align:center;
+
+    font-size:38px;
+
+    margin-bottom:45px;
 }
 
 .section-subtitle{
-text-align:center;
-color:#aab7c7;
-max-width:760px;
-margin:-25px auto 45px
+    text-align:center;
+
+    color:#aab7c7;
+
+    max-width:760px;
+
+    margin:-25px auto 45px;
 }
 
+/* FEATURES */
+
 .grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:20px;
 }
 
 .card{
-background:rgba(255,255,255,.055);
-border:1px solid rgba(255,255,255,.09);
-border-radius:18px;
-padding:28px;
-transition:.2s
+    background:rgba(255,255,255,.055);
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    border-radius:18px;
+
+    padding:28px;
+
+    transition:.2s;
 }
 
 .card:hover{
-border-color:rgba(77,163,255,.35);
-transform:translateY(-3px)
+    border-color:
+        rgba(77,163,255,.35);
+
+    transform:translateY(-3px);
 }
 
 .icon{
-font-size:38px;
-margin-bottom:15px
+    font-size:38px;
+
+    margin-bottom:15px;
 }
 
 .card h3{
-font-size:22px;
-margin-bottom:10px
+    font-size:22px;
+
+    margin-bottom:10px;
 }
 
 .card p{
-color:#b9c5d3
+    color:#b9c5d3;
 }
 
+/* OBJECTS */
+
 .objects{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:14px
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:14px;
 }
 
 .object{
-padding:14px 20px;
-background:rgba(255,255,255,.06);
-border:1px solid rgba(255,255,255,.10);
-border-radius:30px;
-font-size:17px
+    padding:14px 20px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    border-radius:30px;
+
+    font-size:17px;
 }
 
+/* HOW TO USE */
+
 .steps{
-display:grid;
-gap:18px
+    display:grid;
+
+    gap:18px;
 }
 
 .step{
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.09);
-border-radius:18px;
-padding:24px
+    background:
+        rgba(255,255,255,.05);
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    border-radius:18px;
+
+    padding:24px;
 }
 
 .step-number{
-display:inline-flex;
-width:42px;
-height:42px;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-background:#4da3ff;
-color:#07111f;
-font-weight:900;
-margin-bottom:12px
+    display:inline-flex;
+
+    width:42px;
+    height:42px;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#4da3ff;
+
+    color:#07111f;
+
+    font-weight:900;
+
+    margin-bottom:12px;
 }
 
 .step h3{
-font-size:21px;
-margin-bottom:8px
+    font-size:21px;
+
+    margin-bottom:8px;
 }
 
 .step p{
-color:#bac5d3
+    color:#bac5d3;
 }
 
+/* RULES */
+
 .rules{
-background:rgba(77,163,255,.05);
-border:1px solid rgba(77,163,255,.18);
-border-radius:20px;
-padding:30px;
-margin-bottom:18px
+    background:
+        rgba(77,163,255,.05);
+
+    border:
+        1px solid
+        rgba(77,163,255,.18);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    margin-bottom:18px;
 }
 
 .rules h3{
-color:#78bcff;
-margin-bottom:10px;
-font-size:21px
+    color:#78bcff;
+
+    margin-bottom:10px;
+
+    font-size:21px;
 }
 
 .rules p{
-color:#c3cedb
+    color:#c3cedb;
 }
 
+/* WARNING */
+
 .warning{
-background:rgba(255,170,0,.08);
-border:1px solid rgba(255,190,60,.30);
-border-radius:20px;
-padding:30px;
-margin-bottom:20px
+    background:
+        rgba(255,170,0,.08);
+
+    border:
+        1px solid
+        rgba(255,190,60,.30);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    margin-bottom:20px;
 }
 
 .warning h3{
-color:#ffc857;
-margin-bottom:12px;
-font-size:23px
+    color:#ffc857;
+
+    margin-bottom:12px;
+
+    font-size:23px;
 }
 
 .warning p{
-color:#d8dee8
+    color:#d8dee8;
 }
 
+/* DOWNLOAD */
+
 .download{
-text-align:center;
-background:rgba(77,163,255,.06);
-border-top:1px solid rgba(255,255,255,.07);
-border-bottom:1px solid rgba(255,255,255,.07)
+    text-align:center;
+
+    background:
+        rgba(77,163,255,.06);
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.07);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.07);
 }
 
 .download h2{
-font-size:42px;
-margin-bottom:15px
+    font-size:42px;
+
+    margin-bottom:15px;
 }
 
 .download p{
-color:#b9c5d3;
-max-width:720px;
-margin:auto
+    color:#b9c5d3;
+
+    max-width:720px;
+
+    margin:auto;
 }
 
 .version{
-margin-top:20px;
-color:#7dbfff;
-font-weight:bold
+    margin-top:20px;
+
+    color:#7dbfff;
+
+    font-weight:bold;
 }
 
+/* PRIVACY */
+
 .privacy{
-color:#c1cbd8
+    color:#c1cbd8;
 }
 
 .privacy strong{
-color:#fff
+    color:#fff;
 }
+
+/* FOOTER */
 
 footer{
-padding:35px 0;
-text-align:center;
-color:#7f8b9b;
-border-top:1px solid rgba(255,255,255,.07)
+    padding:35px 0;
+
+    text-align:center;
+
+    color:#7f8b9b;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.07);
 }
 
+/* MOBILE */
+
 @media(max-width:800px){
-.grid{grid-template-columns:1fr}
-.nav{flex-direction:column}
-nav a{margin:0 7px}
-.hero{padding-top:70px}
-.hero p{font-size:18px}
-.section-title{font-size:31px}
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .nav{
+        flex-direction:column;
+    }
+
+    nav a{
+        margin:0 7px;
+    }
+
+    .hero{
+        padding-top:70px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .section-title{
+        font-size:31px;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
+
 <div class="container nav">
 
 <div class="logo">
+
 🤖 <span>AI</span> ОБНАРУЖЕНИЕ
+
 </div>
 
 <nav>
-<a href="#features">Возможности</a>
-<a href="#objects">Объекты</a>
-<a href="#how">Как пользоваться</a>
-<a href="#rules">Правила</a>
-<a href="#warning">Важно</a>
-<a href="#download">Скачать</a>
+
+<a href="#features">
+Возможности
+</a>
+
+<a href="#objects">
+Объекты
+</a>
+
+<a href="#how">
+Как пользоваться
+</a>
+
+<a href="#rules">
+Правила
+</a>
+
+<a href="#warning">
+Важно
+</a>
+
+<a href="#download">
+Скачать
+</a>
+
 </nav>
 
 </div>
+
 </header>
 
+
+<!-- HERO -->
 
 <section class="hero">
 
 <div class="container">
 
 <div class="badge">
+
 🧠 Интеллектуальное распознавание объектов для Windows
+
 </div>
 
 <h1>
+
 <span class="blue">AI</span>
-<span class="white"> ОБНАРУЖЕНИЕ</span>
+
+<span class="white">
+ОБНАРУЖЕНИЕ
+</span>
+
 </h1>
 
 <p>
-<strong>AI ОБНАРУЖЕНИЕ</strong> — приложение для Windows
-от проекта <strong>AI ПОИСК</strong>, использующее
-искусственный интеллект и камеру для обнаружения
-выбранных объектов в реальном времени.
+
+<strong>AI ОБНАРУЖЕНИЕ</strong>
+— приложение для Windows
+от проекта <strong>AI ПОИСК</strong>,
+
+использующее искусственный интеллект
+и камеру для обнаружения
+выбранных объектов
+в реальном времени.
+
 </p>
 
 <div class="buttons">
@@ -373,448 +580,1033 @@ nav a{margin:0 7px}
 class="btn primary"
 href="https://github.com/d3796784-rgb/ai-poisk/releases/download/v1.0/AI_POISK.exe"
 >
+
 ⬇ СКАЧАТЬ AI ПОИСК
+
 </a>
 
 <a
 class="btn secondary"
 href="#features"
 >
+
 Узнать больше
+
 </a>
 
 </div>
 
 </div>
+
 </section>
 
+
+<!-- FEATURES -->
 
 <section id="features">
 
 <div class="container">
 
 <h2 class="section-title">
+
 🚀 Возможности AI ОБНАРУЖЕНИЕ
+
 </h2>
 
 <p class="section-subtitle">
-AI ОБНАРУЖЕНИЕ объединяет распознавание объектов,
-визуальную информацию, звуковые сигналы и голосовые
-уведомления в одном приложении.
+
+AI ОБНАРУЖЕНИЕ объединяет
+распознавание объектов,
+визуальную информацию,
+звуковые сигналы
+и голосовые уведомления
+в одном приложении.
+
 </p>
 
 <div class="grid">
 
 <div class="card">
-<div class="icon">🎯</div>
-<h3>Распознавание объектов</h3>
-<p>
-Программа анализирует изображение с камеры
-и ищет выбранный объект в реальном времени.
-</p>
+
+<div class="icon">
+🎯
 </div>
 
-<div class="card">
-<div class="icon">📊</div>
-<h3>Вероятность обнаружения</h3>
+<h3>
+Распознавание объектов
+</h3>
+
 <p>
-На экране отображается примерный процент
-уверенности модели в найденном объекте.
+
+Программа анализирует
+изображение с камеры
+и ищет выбранный объект
+в реальном времени.
+
 </p>
+
 </div>
 
-<div class="card">
-<div class="icon">🖼️</div>
-<h3>Рамки вокруг объектов</h3>
-<p>
-Обнаруженные объекты выделяются рамками
-непосредственно на изображении камеры.
-</p>
-</div>
 
 <div class="card">
-<div class="icon">🗣️</div>
-<h3>Русская озвучка</h3>
-<p>
-При обнаружении программа может сообщить,
-например: «Обнаружен человек».
-</p>
+
+<div class="icon">
+📊
 </div>
 
-<div class="card">
-<div class="icon">🔔</div>
-<h3>Режим «Пик»</h3>
+<h3>
+Вероятность обнаружения
+</h3>
+
 <p>
-Вместо голосового сообщения можно выбрать
+
+На экране отображается
+примерный процент
+уверенности модели
+в найденном объекте.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🖼️
+</div>
+
+<h3>
+Рамки вокруг объектов
+</h3>
+
+<p>
+
+Обнаруженные объекты
+выделяются рамками
+непосредственно
+на изображении камеры.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🗣️
+</div>
+
+<h3>
+Русская озвучка
+</h3>
+
+<p>
+
+При обнаружении программа
+может сообщить,
+например:
+
+«Обнаружен человек».
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🔔
+</div>
+
+<h3>
+Режим «Пик»
+</h3>
+
+<p>
+
+Вместо голосового сообщения
+можно выбрать
 короткий звуковой сигнал.
+
 </p>
+
 </div>
+
 
 <div class="card">
-<div class="icon">📸</div>
-<h3>Сохранение фотографий</h3>
-<p>
-Можно включить или отключить автоматическое
-сохранение фотографии при обнаружении.
-</p>
+
+<div class="icon">
+📸
 </div>
+
+<h3>
+Сохранение фотографий
+</h3>
+
+<p>
+
+Можно включить или отключить
+автоматическое сохранение
+фотографии при обнаружении.
+
+</p>
+
+</div>
+
 
 <div class="card">
-<div class="icon">⚙️</div>
-<h3>Настройки</h3>
-<p>
-Настройки оповещения и сохранения фотографий
-можно изменять непосредственно в приложении.
-</p>
+
+<div class="icon">
+⚙️
 </div>
+
+<h3>
+Настройки
+</h3>
+
+<p>
+
+Настройки оповещения
+и сохранения фотографий
+можно изменять
+непосредственно
+в приложении.
+
+</p>
+
+</div>
+
 
 <div class="card">
-<div class="icon">💻</div>
-<h3>Готовый Windows EXE</h3>
-<p>
-Для запуска готового приложения пользователю
-не требуется отдельно устанавливать Python.
-</p>
+
+<div class="icon">
+💻
 </div>
+
+<h3>
+Готовый Windows EXE
+</h3>
+
+<p>
+
+Для запуска готового приложения
+пользователю не требуется
+отдельно устанавливать Python.
+
+</p>
+
+</div>
+
 
 <div class="card">
-<div class="icon">⚡</div>
-<h3>Работа через камеру</h3>
+
+<div class="icon">
+⚡
+</div>
+
+<h3>
+Работа через камеру
+</h3>
+
 <p>
-После выбора объекта программа начинает
-анализировать изображение с камеры.
+
+После выбора объекта
+программа начинает
+анализировать изображение
+с камеры.
+
 </p>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
+
+<!-- OBJECTS -->
 
 <section id="objects">
 
 <div class="container">
 
 <h2 class="section-title">
+
 🔎 Поддерживаемые объекты
+
 </h2>
 
 <p class="section-subtitle">
-Сейчас AI ОБНАРУЖЕНИЕ может искать следующие объекты:
+
+Сейчас AI ОБНАРУЖЕНИЕ
+может искать
+следующие объекты:
+
 </p>
 
 <div class="objects">
 
-<div class="object">👤 Человек</div>
-<div class="object">🚗 Машина</div>
-<div class="object">🍾 Бутылка</div>
-<div class="object">🥤 Кружка</div>
-<div class="object">🐱 Кот</div>
-<div class="object">🐶 Собака</div>
-<div class="object">🪑 Стул</div>
-<div class="object">📱 Телефон</div>
+<div class="object">
+👤 Человек
+</div>
+
+<div class="object">
+🚗 Машина
+</div>
+
+<div class="object">
+🍾 Бутылка
+</div>
+
+<div class="object">
+🥤 Кружка
+</div>
+
+<div class="object">
+🐱 Кот
+</div>
+
+<div class="object">
+🐶 Собака
+</div>
+
+<div class="object">
+🪑 Стул
+</div>
+
+<div class="object">
+📱 Телефон
+</div>
 
 </div>
+
 </div>
+
 </section>
 
+
+<!-- HOW TO USE -->
 
 <section id="how">
 
 <div class="container">
 
 <h2 class="section-title">
-📖 Как пользоваться AI ОБНАРУЖЕНИЕ
+
+📖 Как пользоваться
+AI ОБНАРУЖЕНИЕ
+
 </h2>
 
 <p class="section-subtitle">
-Пошаговая инструкция для первого запуска программы.
+
+Пошаговая инструкция
+для первого запуска программы.
+
 </p>
 
 <div class="steps">
 
-<div class="step">
-<div class="step-number">1</div>
-<h3>Скачайте программу</h3>
-<p>
-Нажмите кнопку «Скачать AI ПОИСК».
-Будет скачан файл <strong>AI_POISK.exe</strong>.
-</p>
-</div>
 
 <div class="step">
-<div class="step-number">2</div>
-<h3>Запустите программу</h3>
+
+<div class="step-number">
+1
+</div>
+
+<h3>
+Скачайте программу
+</h3>
+
 <p>
+
+Нажмите кнопку
+«Скачать AI ПОИСК».
+
+Будет скачан файл
+
+<strong>
+AI_POISK.exe
+</strong>.
+
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+2
+</div>
+
+<h3>
+Запустите программу
+</h3>
+
+<p>
+
 Откройте скачанный файл.
+
 Первый запуск может занимать
-<strong>до 1 минуты 30 секунд</strong>.
-Если окно сразу не появилось,
-не закрывайте программу — просто подождите.
+
+<strong>
+до 1 минуты 30 секунд
+</strong>.
+
+Если окно сразу
+не появилось,
+не закрывайте программу —
+просто подождите.
+
 </p>
+
 </div>
 
-<div class="step">
-<div class="step-number">3</div>
-<h3>Подготовьте камеру</h3>
-<p>
-Можно использовать встроенную камеру ноутбука
-или отдельную USB-веб-камеру.
-Убедитесь, что Windows видит камеру.
-</p>
-</div>
 
 <div class="step">
-<div class="step-number">4</div>
-<h3>Выберите объект</h3>
-<p>
-В главном меню выберите нужный объект:
-человека, машину, бутылку, кружку,
-кота, собаку, стул или телефон.
-</p>
+
+<div class="step-number">
+3
 </div>
 
-<div class="step">
-<div class="step-number">5</div>
-<h3>Наведите камеру</h3>
+<h3>
+Подготовьте камеру
+</h3>
+
 <p>
-Направьте камеру на выбранный объект
-и подождите завершения анализа.
+
+Можно использовать
+встроенную камеру ноутбука
+или отдельную
+USB-веб-камеру.
+
+Убедитесь,
+что Windows видит камеру.
+
 </p>
+
 </div>
 
-<div class="step">
-<div class="step-number">6</div>
-<h3>Получите результат</h3>
-<p>
-При обнаружении программа покажет
-рамку, название объекта и вероятность.
-</p>
-</div>
 
 <div class="step">
-<div class="step-number">7</div>
-<h3>Настройте оповещение</h3>
+
+<div class="step-number">
+4
+</div>
+
+<h3>
+Выберите объект
+</h3>
+
 <p>
+
+В главном меню
+выберите нужный объект:
+
+человека,
+машину,
+бутылку,
+кружку,
+кота,
+собаку,
+стул
+или телефон.
+
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+5
+</div>
+
+<h3>
+Наведите камеру
+</h3>
+
+<p>
+
+Направьте камеру
+на выбранный объект
+и подождите
+завершения анализа.
+
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+6
+</div>
+
+<h3>
+Получите результат
+</h3>
+
+<p>
+
+При обнаружении программа
+покажет рамку,
+название объекта
+и вероятность.
+
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+7
+</div>
+
+<h3>
+Настройте оповещение
+</h3>
+
+<p>
+
 В настройках можно выбрать
-<strong>русскую озвучку</strong> или
-режим <strong>«Пик»</strong>, а также
-включить или отключить сохранение фотографий.
+
+<strong>
+русскую озвучку
+</strong>
+
+или режим
+
+<strong>
+«Пик»
+</strong>,
+
+а также включить
+или отключить
+сохранение фотографий.
+
 </p>
+
 </div>
+
 
 <div class="step">
-<div class="step-number">8</div>
-<h3>Остановите камеру</h3>
+
+<div class="step-number">
+8
+</div>
+
+<h3>
+Остановите камеру
+</h3>
+
 <p>
-Нажмите клавишу <strong>Q</strong>,
-чтобы остановить поиск и вернуться
+
+Нажмите клавишу
+
+<strong>
+Q
+</strong>,
+
+чтобы остановить поиск
+и вернуться
 в главное меню.
+
 <br><br>
-⚠️ <strong>
-Перед нажатием Q переключите клавиатуру
+
+⚠️
+
+<strong>
+
+Перед нажатием Q
+переключите клавиатуру
 на английскую раскладку ENG.
+
 </strong>
+
 </p>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
+
+<!-- RULES -->
 
 <section id="rules">
 
 <div class="container">
 
 <h2 class="section-title">
-📜 Правила пользования AI ОБНАРУЖЕНИЕ
+
+📜 Правила пользования
+AI ОБНАРУЖЕНИЕ
+
 </h2>
 
 <p class="section-subtitle">
-Пожалуйста, ознакомьтесь с правилами перед использованием программы.
+
+Пожалуйста,
+ознакомьтесь с правилами
+перед использованием программы.
+
 </p>
 
+
 <div class="rules">
-<h3>1. Используйте программу законно</h3>
+
+<h3>
+1. Используйте программу законно
+</h3>
+
 <p>
-Не используйте AI ОБНАРУЖЕНИЕ для действий,
-которые нарушают законодательство или права других людей.
+
+Не используйте
+AI ОБНАРУЖЕНИЕ
+для действий,
+которые нарушают
+законодательство
+или права других людей.
+
 </p>
+
 </div>
 
-<div class="rules">
-<h3>2. Уважайте частную жизнь</h3>
-<p>
-Не направляйте камеру на людей без их согласия
-в ситуациях, где это может нарушать их право на приватность.
-</p>
-</div>
 
 <div class="rules">
-<h3>3. Не полагайтесь только на результат AI</h3>
+
+<h3>
+2. Уважайте частную жизнь
+</h3>
+
 <p>
-Результаты искусственного интеллекта могут содержать ошибки.
-Процент вероятности является оценкой модели,
-а не гарантией правильного обнаружения.
+
+Не направляйте камеру
+на людей без их согласия
+в ситуациях,
+где это может нарушать
+их право на приватность.
+
 </p>
+
 </div>
 
-<div class="rules">
-<h3>4. Не используйте программу как профессиональную систему безопасности</h3>
-<p>
-AI ОБНАРУЖЕНИЕ не является профессиональной системой
-охраны, медицинской системой, системой контроля доступа
-или гарантированным средством обнаружения угроз.
-</p>
-</div>
 
 <div class="rules">
-<h3>5. Ответственность пользователя</h3>
+
+<h3>
+3. Не полагайтесь
+только на результат AI
+</h3>
+
 <p>
-Пользователь самостоятельно отвечает за использование
-программы, камеры, результатов распознавания
+
+Результаты
+искусственного интеллекта
+могут содержать ошибки.
+
+Процент вероятности
+является оценкой модели,
+а не гарантией
+правильного обнаружения.
+
+</p>
+
+</div>
+
+
+<div class="rules">
+
+<h3>
+4. Не используйте программу
+как профессиональную
+систему безопасности
+</h3>
+
+<p>
+
+AI ОБНАРУЖЕНИЕ
+не является профессиональной
+системой охраны,
+медицинской системой,
+системой контроля доступа
+или гарантированным
+средством обнаружения угроз.
+
+</p>
+
+</div>
+
+
+<div class="rules">
+
+<h3>
+5. Ответственность пользователя
+</h3>
+
+<p>
+
+Пользователь самостоятельно
+отвечает за использование
+программы,
+камеры,
+результатов распознавания
 и сохранённых фотографий.
+
 </p>
+
 </div>
 
+
 <div class="rules">
-<h3>6. Ответственное использование фотографий</h3>
+
+<h3>
+6. Ответственное использование фотографий
+</h3>
+
 <p>
-Если включено автоматическое сохранение фотографий,
-пользователь отвечает за хранение и использование
+
+Если включено автоматическое
+сохранение фотографий,
+пользователь отвечает
+за хранение и использование
 полученных изображений.
+
 </p>
+
 </div>
 
+
 <div class="rules">
-<h3>7. Не отключайте защиту Windows</h3>
+
+<h3>
+7. Не отключайте защиту Windows
+</h3>
+
 <p>
-Если Windows показывает предупреждение SmartScreen,
+
+Если Windows показывает
+предупреждение SmartScreen,
 не отключайте защиту системы полностью.
+
 </p>
+
 </div>
 
-<div class="rules">
-<h3>8. Учитывайте ограничения распознавания</h3>
-<p>
-На результат могут влиять освещение, расстояние,
-угол камеры, качество изображения и другие условия.
-</p>
-</div>
 
 <div class="rules">
-<h3>9. Используйте официальную версию</h3>
+
+<h3>
+8. Учитывайте ограничения распознавания
+</h3>
+
 <p>
-Для получения актуальных исправлений рекомендуется
-скачивать программу только с официального сайта
+
+На результат могут влиять:
+
+освещение,
+расстояние,
+угол камеры,
+качество изображения
+и другие условия.
+
+</p>
+
+</div>
+
+
+<div class="rules">
+
+<h3>
+9. Используйте официальную версию
+</h3>
+
+<p>
+
+Для получения актуальных исправлений
+рекомендуется скачивать программу
+только с официального сайта
 AI ПОИСК.
+
 </p>
+
 </div>
+
 
 <div class="warning">
-<h3>⚠️ Важное уведомление</h3>
+
+<h3>
+⚠️ Важное уведомление
+</h3>
+
 <p>
+
 <strong>
-AI ОБНАРУЖЕНИЕ предоставляется для ознакомительных
+
+AI ОБНАРУЖЕНИЕ
+предоставляется
+для ознакомительных
 и практических целей.
+
 </strong>
-Программа не гарантирует абсолютную точность обнаружения
-объектов и не заменяет профессиональные системы безопасности.
+
+Программа не гарантирует
+абсолютную точность обнаружения
+объектов и не заменяет
+профессиональные системы
+безопасности.
+
 </p>
+
 </div>
 
 </div>
+
 </section>
 
+
+<!-- WARNING -->
 
 <section id="warning">
 
 <div class="container">
 
 <h2 class="section-title">
-⚠️ Важная информация перед запуском
+
+⚠️ Важная информация
+перед запуском
+
 </h2>
 
+
 <div class="warning">
-<h3>⏳ Программа может запускаться до 1 минуты 30 секунд</h3>
+
+<h3>
+
+⏳ Программа может запускаться
+до 1 минуты 30 секунд
+
+</h3>
+
 <p>
-AI ОБНАРУЖЕНИЕ может запускаться
-<strong>до 1 минуты 30 секунд</strong>,
+
+AI ОБНАРУЖЕНИЕ
+может запускаться
+
+<strong>
+до 1 минуты 30 секунд
+</strong>,
+
 особенно при первом запуске.
-Если окно не появилось сразу — просто подождите.
-Не запускайте несколько копий программы одновременно.
+
+Если окно не появилось сразу —
+просто подождите.
+
+Не запускайте несколько
+копий программы одновременно.
+
 </p>
+
 </div>
 
+
 <div class="warning">
-<h3>📷 Камера может запускаться до 1 минуты</h3>
+
+<h3>
+
+📷 Камера может запускаться
+до 1 минуты
+
+</h3>
+
 <p>
-После запуска программы подключение камеры
-также может занимать <strong>до 1 минуты</strong>.
+
+После запуска программы
+подключение камеры также
+может занимать
+
+<strong>
+до 1 минуты
+</strong>.
+
 Это нормально.
+
 </p>
+
 </div>
 
+
 <div class="warning">
-<h3>📷 Требуется работающая веб-камера</h3>
+
+<h3>
+
+📷 Требуется работающая веб-камера
+
+</h3>
+
 <p>
-Можно использовать встроенную камеру ноутбука
+
+Можно использовать
+встроенную камеру ноутбука
 или внешнюю USB-веб-камеру.
-Если камера занята другой программой
-или Windows не предоставляет к ней доступ,
-распознавание работать не сможет.
+
+Если камера занята
+другой программой
+или Windows не предоставляет
+к ней доступ,
+распознавание работать
+не сможет.
+
 </p>
+
 </div>
 
-<div class="warning">
-<h3>💾 Требуется свободное место на диске</h3>
-<p>
-Программа содержит модель искусственного интеллекта
-и необходимые компоненты для работы.
-Сохранённые фотографии также занимают место.
-</p>
-</div>
 
 <div class="warning">
-<h3>🛡️ Предупреждение Windows SmartScreen</h3>
+
+<h3>
+
+💾 Требуется свободное место
+на диске
+
+</h3>
+
 <p>
-При первом запуске Windows Defender SmartScreen может
-показать предупреждение о неизвестном приложении.
-Само появление такого предупреждения
-<strong>не означает автоматически, что программа вредоносная.</strong>
-Рекомендуется скачивать программу только с официального сайта
-и при желании проверить файл антивирусом.
-Не отключайте защиту Windows целиком ради запуска программы.
+
+Программа содержит
+модель искусственного интеллекта
+и необходимые компоненты
+для работы.
+
+Сохранённые фотографии
+также занимают место.
+
 </p>
+
 </div>
 
+
 <div class="warning">
-<h3>🐍 Python устанавливать не нужно</h3>
+
+<h3>
+
+🛡️ Предупреждение
+Windows SmartScreen
+
+</h3>
+
 <p>
-Для готового <strong>AI_POISK.exe</strong>
-не требуется отдельно устанавливать Python
+
+При первом запуске
+Windows Defender SmartScreen
+может показать предупреждение
+о неизвестном приложении.
+
+Само появление такого
+предупреждения
+
+<strong>
+
+не означает автоматически,
+что программа вредоносная.
+
+</strong>
+
+<br><br>
+
+Рекомендуется скачивать программу
+только с официального сайта
+и при желании проверить файл
+антивирусом.
+
+<br><br>
+
+<strong>
+
+Не отключайте защиту Windows
+целиком ради запуска программы.
+
+</strong>
+
+</p>
+
+</div>
+
+
+<div class="warning">
+
+<h3>
+
+🐍 Python устанавливать не нужно
+
+</h3>
+
+<p>
+
+Для готового
+
+<strong>
+AI_POISK.exe
+</strong>
+
+не требуется отдельно
+устанавливать Python
 или библиотеки программы.
+
 </p>
+
 </div>
 
 </div>
+
 </section>
 
 
-<section class="download" id="download">
+<!-- DOWNLOAD -->
+
+<section
+class="download"
+id="download"
+>
 
 <div class="container">
 
 <h2>
+
 ⬇ Скачать AI ПОИСК
+
 </h2>
 
 <p>
-Скачайте приложение <strong>AI ОБНАРУЖЕНИЕ</strong>
+
+Скачайте приложение
+<strong>
+AI ОБНАРУЖЕНИЕ
+</strong>
+
 для Windows.
-Кнопка ниже ведёт непосредственно к файлу
-<strong>AI_POISK.exe</strong>.
+
+Кнопка ниже ведёт
+непосредственно к файлу
+
+<strong>
+AI_POISK.exe
+</strong>.
+
 </p>
 
 <div class="buttons">
@@ -823,68 +1615,134 @@ AI ОБНАРУЖЕНИЕ может запускаться
 class="btn primary"
 href="https://github.com/d3796784-rgb/ai-poisk/releases/download/v1.0/AI_POISK.exe"
 >
+
 ⬇ СКАЧАТЬ AI ПОИСК
+
 </a>
 
 </div>
 
 <div class="version">
-Версия 1.0 • Windows • Проект AI ПОИСК
+
+Версия 1.0
+•
+Windows
+•
+Проект AI ПОИСК
+
 </div>
 
 </div>
+
 </section>
 
+
+<!-- PRIVACY -->
 
 <section>
 
 <div class="container privacy">
 
 <h2 class="section-title">
+
 🔐 Конфиденциальность
+
 </h2>
 
 <p>
-AI ОБНАРУЖЕНИЕ использует изображение с камеры
-для распознавания объектов.
-Если включено сохранение фотографий,
-изображения сохраняются локально
-на компьютере пользователя.
+
+AI ОБНАРУЖЕНИЕ
+использует изображение
+с камеры для распознавания
+объектов.
+
+Если включено сохранение
+фотографий,
+изображения сохраняются
+локально на компьютере
+пользователя.
+
 </p>
 
 <br>
 
 <p>
-<strong>Важно:</strong>
-результат работы искусственного интеллекта
-не всегда может быть абсолютно точным.
-На распознавание могут влиять освещение,
-расстояние, угол обзора, качество камеры
+
+<strong>
+Важно:
+</strong>
+
+результат работы
+искусственного интеллекта
+не всегда может быть
+абсолютно точным.
+
+На распознавание
+могут влиять:
+
+освещение,
+расстояние,
+угол обзора,
+качество камеры
 и другие условия.
+
 </p>
 
 <br>
 
 <p>
-Процент на экране является оценкой уверенности модели,
-а не гарантией правильного результата.
+
+Процент на экране
+является оценкой
+уверенности модели,
+а не гарантией
+правильного результата.
+
+</p>
+
+<br>
+
+<p>
+
+Не направляйте камеру
+на людей или территории,
+где съёмка запрещена
+или может нарушать права
+других людей.
+
 </p>
 
 </div>
+
 </section>
 
+
+<!-- FOOTER -->
 
 <footer>
 
 <div class="container">
 
 <p>
-🤖 <strong>AI ОБНАРУЖЕНИЕ</strong>
-— приложение проекта <strong>AI ПОИСК</strong>.
+
+🤖
+
+<strong>
+AI ОБНАРУЖЕНИЕ
+</strong>
+
+— приложение проекта
+
+<strong>
+AI ПОИСК
+</strong>.
+
 </p>
 
 <p>
+
 © 2026 AI ПОИСК
+
 </p>
 
 </div>
